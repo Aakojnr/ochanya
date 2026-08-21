@@ -5,26 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>For Ochanya ❤️</title>
   
-  <!-- Meta & Social Sharing Preview -->
   <meta name="description" content="A private letter for Ochanya. 4 years, 9 months.">
   <meta property="og:title" content="For Ochanya ❤️">
   <meta property="og:description" content="Some things are easier to show than to say.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#090909">
+  <meta name="theme-color" content="#1a0f10">
 
-  <!-- Google Fonts: Playfair Display + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Subtle Film Grain Background -->
+  <!-- Film Grain -->
   <div class="grain-overlay" aria-hidden="true"></div>
+  
+  <!-- Ambient rose glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
 
-  <!-- Screen 1: Cinematic Opening Landing -->
+  <!-- Hidden YouTube Player -->
+  <div id="yt-player-wrapper" aria-hidden="true">
+    <div id="yt-player"></div>
+  </div>
+
+  <!-- Floating Music Indicator -->
+  <div id="music-indicator" class="music-indicator hidden" role="button" aria-label="Toggle music" tabindex="0">
+    <div class="music-bars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Screen 1: Cinematic Opening -->
   <section id="opening" class="screen landing-screen">
     <div class="content-wrapper centered">
       <p class="subtitle fade-in-delay-1">For Ochanya.</p>
@@ -36,108 +52,108 @@
     </div>
   </section>
 
-  <!-- Main Experience (Revealed after opening) -->
+  <!-- Main Experience -->
   <main id="experience" class="experience hidden">
-    
-    <!-- Screen 2: Anniversary Letter -->
-    <section class="screen letter-section scroll-reveal">
+
+    <!-- Section: Anniversary Letter -->
+    <section class="screen letter-section">
       <div class="content-wrapper">
-        <div class="anniversary-badge">
+        <div class="anniversary-badge scroll-reveal">
           <span>4 years, 9 months.</span>
-          <span class="red-accent">❤️</span>
+          <span class="pink-accent">❤️</span>
         </div>
         
         <article class="letter-body">
-          <p class="reveal-text">
-            Honestly, it’s crazy how much time has passed. We’ve been through a lot, grown in so many ways, and somehow, we’re still here.
+          <p class="scroll-reveal">
+            Honestly, it's crazy how much time has passed. We've been through a lot, grown in so many ways, and somehow, we're still here.
           </p>
-          <p class="reveal-text">
-            I’m grateful for every moment, the good ones and even the difficult ones. Thank you for being part of my life and for all the memories we’ve made.
+          <p class="scroll-reveal">
+            I'm grateful for every moment, the good ones and even the difficult ones. Thank you for being part of my life and for all the memories we've made.
           </p>
-          <p class="reveal-text highlight-paragraph">
-            Here’s to us, to everything we’ve shared, and hopefully, to many more beautiful moments together. <span class="red-accent">❤️</span>
+          <p class="scroll-reveal highlight-paragraph">
+            Here's to us, to everything we've shared, and hopefully, to many more beautiful moments together. <span class="pink-accent">❤️</span>
           </p>
         </article>
       </div>
     </section>
 
-    <!-- Screen 3: Memory Gallery -->
-    <section class="screen gallery-section scroll-reveal">
+    <!-- Section: Memory Slideshow -->
+    <section class="screen gallery-section">
       <div class="content-wrapper">
-        <p class="section-label">Moments</p>
-        <div class="gallery-container" id="gallery-container">
-          <!-- Dynamically populated via script.js -->
+        <p class="section-label scroll-reveal">Moments</p>
+        
+        <div class="slideshow-container scroll-reveal" id="slideshow">
+          <div class="slideshow-track" id="slideshow-track">
+            <!-- Images injected by JS -->
+          </div>
+
+          <!-- Progress dots -->
+          <div class="slideshow-dots" id="slideshow-dots"></div>
+
+          <!-- Navigation arrows -->
+          <button class="slide-arrow slide-arrow-left" id="slide-prev" aria-label="Previous photo">‹</button>
+          <button class="slide-arrow slide-arrow-right" id="slide-next" aria-label="Next photo">›</button>
         </div>
+
+        <p class="slideshow-caption" id="slideshow-caption"></p>
       </div>
     </section>
 
-    <!-- Screen 4: Short Love Notes -->
+    <!-- Section: Love Notes -->
     <section class="screen notes-section">
       <div class="content-wrapper">
         <h2 class="section-heading scroll-reveal">A few things I want you to know…</h2>
         
         <div class="notes-stack">
           <div class="note-card scroll-reveal">
-            <span class="note-quote">“</span>
+            <span class="note-quote">"</span>
             <p>Thank you for being part of my life.</p>
           </div>
-
           <div class="note-card scroll-reveal">
-            <span class="note-quote">“</span>
-            <p>Thank you for all the memories we’ve made.</p>
+            <span class="note-quote">"</span>
+            <p>Thank you for all the memories we've made.</p>
           </div>
-
           <div class="note-card scroll-reveal">
-            <span class="note-quote">“</span>
-            <p>We’ve changed, we’ve grown, and somehow, we’re still here.</p>
+            <span class="note-quote">"</span>
+            <p>We've changed, we've grown, and somehow, we're still here.</p>
           </div>
-
           <div class="note-card scroll-reveal">
-            <span class="note-quote">“</span>
+            <span class="note-quote">"</span>
             <p>Whatever comes next, I hope we keep choosing each other.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Screen 5: Music -->
-    <section class="screen music-section scroll-reveal">
+    <!-- Section: Music -->
+    <section class="screen music-section">
       <div class="content-wrapper centered">
-        <p class="music-intro">🎵 Our little soundtrack.</p>
-        <h3 class="song-title">I’m in Love (Acoustic)</h3>
-        <p class="song-artist">Patoranking</p>
-        
-        <a href="https://www.youtube.com/results?search_query=Patoranking+I%27m+in+Love+Acoustic" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="music-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
-          <span>Listen</span>
-        </a>
+        <p class="music-intro scroll-reveal">Our little soundtrack</p>
+        <h3 class="song-title scroll-reveal">I'm in Love (Acoustic)</h3>
+        <p class="song-artist scroll-reveal">Patoranking</p>
+        <p class="music-note scroll-reveal">— playing softly for us —</p>
       </div>
     </section>
 
-    <!-- Screen 6: Final Screen -->
-    <section class="screen final-screen scroll-reveal">
+    <!-- Section: Final -->
+    <section class="screen final-screen">
       <div class="content-wrapper centered">
-        <div class="timeline">
+        <div class="timeline scroll-reveal">
           <span class="timeline-date">21.11.2021</span>
           <span class="timeline-line"></span>
           <span class="timeline-date">21.08.2026</span>
         </div>
 
-        <h2 class="final-statement">Still us.</h2>
-        <p class="final-gratitude">And I’m still grateful it’s you. <span class="red-accent">❤️</span></p>
-        <p class="signature">— A</p>
+        <h2 class="final-statement scroll-reveal">Still us.</h2>
+        <p class="final-gratitude scroll-reveal">And I'm still grateful it's you. <span class="pink-accent">❤️</span></p>
+        <p class="signature scroll-reveal">— A</p>
       </div>
       <div class="fade-to-black" aria-hidden="true"></div>
     </section>
 
   </main>
 
-  <!-- Fullscreen Lightbox for Photos -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <div class="lightbox-backdrop"></div>
     <div class="lightbox-content">
@@ -148,6 +164,7 @@
     <div class="lightbox-hint">Tap anywhere to close</div>
   </div>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
 </body>
 </html>
