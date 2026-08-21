@@ -8,12 +8,12 @@
 // If you upload photos with different filenames, just change them here!
 // ==========================================================================
 const PHOTOS = [
-  { src: "images/photo1.jpg", caption: "" },
-  { src: "images/photo2.jpg", caption: "" },
-  { src: "images/photo3.jpg", caption: "" },
-  { src: "images/photo4.jpg", caption: "" },
-  { src: "images/photo5.jpg", caption: "" },
-  { src: "images/photo6.jpg", caption: "" },
+  { src: "IMG-20231116-WA0115.jpeg", caption: "" },
+  { src: "IMG_9940.jpeg", caption: "" },
+  { src: "IMG_3102.jpeg", caption: "" },
+  { src: "IMG_9949.jpeg", caption: "" },
+  { src: "IMG_4891.jpeg", caption: "" },
+  { src: "IMG_3927.jpeg", caption: "" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
