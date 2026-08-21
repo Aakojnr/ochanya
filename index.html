@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>For Ochanya ❤️</title>
+  
+  <!-- Meta & Social Sharing Preview -->
+  <meta name="description" content="A private letter for Ochanya. 4 years, 9 months.">
+  <meta property="og:title" content="For Ochanya ❤️">
+  <meta property="og:description" content="Some things are easier to show than to say.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Subtle Film Grain Background -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Screen 1: Cinematic Opening Landing -->
+  <section id="opening" class="screen landing-screen">
+    <div class="content-wrapper centered">
+      <p class="subtitle fade-in-delay-1">For Ochanya.</p>
+      <h1 class="landing-statement fade-in-delay-2">Some things are easier to show than to say.</h1>
+      <button id="open-btn" class="open-btn fade-in-delay-3" type="button" aria-label="Open letter">
+        <span>Open</span>
+        <span class="heart-icon">♥</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Experience (Revealed after opening) -->
+  <main id="experience" class="experience hidden">
+    
+    <!-- Screen 2: Anniversary Letter -->
+    <section class="screen letter-section scroll-reveal">
+      <div class="content-wrapper">
+        <div class="anniversary-badge">
+          <span>4 years, 9 months.</span>
+          <span class="red-accent">❤️</span>
+        </div>
+        
+        <article class="letter-body">
+          <p class="reveal-text">
+            Honestly, it’s crazy how much time has passed. We’ve been through a lot, grown in so many ways, and somehow, we’re still here.
+          </p>
+          <p class="reveal-text">
+            I’m grateful for every moment, the good ones and even the difficult ones. Thank you for being part of my life and for all the memories we’ve made.
+          </p>
+          <p class="reveal-text highlight-paragraph">
+            Here’s to us, to everything we’ve shared, and hopefully, to many more beautiful moments together. <span class="red-accent">❤️</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screen 3: Memory Gallery -->
+    <section class="screen gallery-section scroll-reveal">
+      <div class="content-wrapper">
+        <p class="section-label">Moments</p>
+        <div class="gallery-container" id="gallery-container">
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 4: Short Love Notes -->
+    <section class="screen notes-section">
+      <div class="content-wrapper">
+        <h2 class="section-heading scroll-reveal">A few things I want you to know…</h2>
+        
+        <div class="notes-stack">
+          <div class="note-card scroll-reveal">
+            <span class="note-quote">“</span>
+            <p>Thank you for being part of my life.</p>
+          </div>
+
+          <div class="note-card scroll-reveal">
+            <span class="note-quote">“</span>
+            <p>Thank you for all the memories we’ve made.</p>
+          </div>
+
+          <div class="note-card scroll-reveal">
+            <span class="note-quote">“</span>
+            <p>We’ve changed, we’ve grown, and somehow, we’re still here.</p>
+          </div>
+
+          <div class="note-card scroll-reveal">
+            <span class="note-quote">“</span>
+            <p>Whatever comes next, I hope we keep choosing each other.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 5: Music -->
+    <section class="screen music-section scroll-reveal">
+      <div class="content-wrapper centered">
+        <p class="music-intro">🎵 Our little soundtrack.</p>
+        <h3 class="song-title">I’m in Love (Acoustic)</h3>
+        <p class="song-artist">Patoranking</p>
+        
+        <a href="https://www.youtube.com/results?search_query=Patoranking+I%27m+in+Love+Acoustic" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="music-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Listen</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Screen 6: Final Screen -->
+    <section class="screen final-screen scroll-reveal">
+      <div class="content-wrapper centered">
+        <div class="timeline">
+          <span class="timeline-date">21.11.2021</span>
+          <span class="timeline-line"></span>
+          <span class="timeline-date">21.08.2026</span>
+        </div>
+
+        <h2 class="final-statement">Still us.</h2>
+        <p class="final-gratitude">And I’m still grateful it’s you. <span class="red-accent">❤️</span></p>
+        <p class="signature">— A</p>
+      </div>
+      <div class="fade-to-black" aria-hidden="true"></div>
+    </section>
+
+  </main>
+
+  <!-- Fullscreen Lightbox for Photos -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged memory">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close photo">✕</button>
+    <div class="lightbox-hint">Tap anywhere to close</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
